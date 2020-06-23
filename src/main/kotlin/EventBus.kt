@@ -1,4 +1,5 @@
 import tornadofx.FXEvent
+import tornadofx.Scope
 
 enum class ViewState {
     MENU,
@@ -12,4 +13,4 @@ enum class ViewState {
  * Event Bus actions
  */
 
-class ViewChange(val state: ViewState) : FXEvent()
+class ViewChange(val state: ViewState, scope: Scope) : FXEvent(scope = scope)

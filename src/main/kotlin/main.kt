@@ -9,6 +9,7 @@ fun main () {
     launch<TestApp>()
 }
 
+
 class WebScope(val stage: Stage) : Scope() {
     val webAPI: WebAPI get() = WebAPI.getWebAPI(stage)
 }
