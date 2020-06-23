@@ -107,33 +107,6 @@ class Menu : View () {
                     fire(ViewChange(ViewState.SCREEN4, scope))
                 }
             }
-            button("quit") {
-                action {
-                }
-            }
         }
     }
-}
-
-class EnderZone : View ()  {
-    val content = vbox (20.0) {
-        hgrow = Priority.ALWAYS
-        vgrow = Priority.ALWAYS
-        alignment = Pos.CENTER
-        label("This is the end") {
-            alignment = Pos.CENTER
-        }
-        button("back") {
-            alignment = Pos.CENTER
-            action {
-            }
-        }
-    }
-    init {
-        content.addEventHandler(MOUSE_PRESSED) {
-            println(scope)
-            println(subscribedEvents.toString())
-        }
-    }
-    override val root = content
 }
